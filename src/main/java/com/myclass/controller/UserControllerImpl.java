@@ -7,8 +7,8 @@ import com.myclass.entity.User;
 public class UserControllerImpl implements UserController{
     private UserDao userDao = null;
     
-    public UserControllerImpl() {
-        userDao = new UserDaoImpl();
+    public UserControllerImpl(UserDao userDao) {
+        this.userDao = userDao;
     }
     public void transferMoney(int fromId, int toId, long money) {
         
